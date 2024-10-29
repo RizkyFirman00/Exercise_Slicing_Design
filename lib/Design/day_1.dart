@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Person {
   final String name;
@@ -32,7 +33,9 @@ class Day1 extends StatelessWidget {
         foregroundColor: Colors.white,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
-          onPressed: () {},
+          onPressed: () {
+            Get.back();
+          },
         ),
         actions: [
           IconButton(
@@ -112,8 +115,6 @@ class Day1 extends StatelessWidget {
   }
 }
 
-
-
 class ListChat extends StatelessWidget {
   final Person personModel;
 
@@ -144,7 +145,10 @@ class ListChat extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text(personModel.name), Text(personModel.chat ?? "No message")],
+            children: [
+              Text(personModel.name),
+              Text(personModel.chat ?? "No message")
+            ],
           )
         ],
       ),
@@ -199,4 +203,3 @@ class StoryBubble extends StatelessWidget {
     );
   }
 }
-
