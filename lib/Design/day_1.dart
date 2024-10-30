@@ -32,7 +32,7 @@ class Day1 extends StatelessWidget {
         backgroundColor: Colors.blueAccent,
         foregroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
             Get.back();
           },
@@ -40,7 +40,7 @@ class Day1 extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
         ],
       ),
@@ -48,14 +48,14 @@ class Day1 extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Chat with \nyour friends",
                     style: TextStyle(
                       fontSize: 42,
@@ -63,7 +63,7 @@ class Day1 extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
@@ -79,14 +79,15 @@ class Day1 extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Expanded(
               child: Container(
                 width: double.infinity,
                 height: 100,
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 10),
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(30),
@@ -123,7 +124,7 @@ class ListChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 25, right: 25, left: 25),
+      padding: const EdgeInsets.only(top: 25, right: 25, left: 25),
       child: Row(
         children: [
           Container(
@@ -139,7 +140,7 @@ class ListChat extends StatelessWidget {
               backgroundImage: AssetImage(personModel.image),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 30,
           ),
           Column(
@@ -183,16 +184,16 @@ class StoryBubble extends StatelessWidget {
               backgroundImage: AssetImage(personModel.image),
             ),
           ),
-          SizedBox(
-            height: 10,
+          const SizedBox(
+            height: 5,
           ),
           Container(
             child: Text(
               personModel.name,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
-                fontSize: 18,
+                fontSize: 12,
               ),
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
