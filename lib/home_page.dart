@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:more_slicing_design/Design/day_1.dart';
+import 'package:more_slicing_design/Design/day_2.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,7 +12,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<Map<String, dynamic>> pages = [
-    {'pages': Day1(), 'title': "Chat Story"}
+    {'pages': Day1(), 'title': "Chat Story"},
+    {'pages': Day2(), 'title': "Duplicate JakOne"},
   ];
 
   @override
@@ -32,7 +34,7 @@ class _HomePageState extends State<HomePage> {
               physics: const BouncingScrollPhysics(),
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: CardDay(
                     title: pages[index]['title'],
                     onPressed: () => Get.to(pages[index]['pages']),
